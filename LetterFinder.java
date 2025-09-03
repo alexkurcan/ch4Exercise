@@ -23,7 +23,7 @@ public class LetterFinder{
             }
 
             // Find the digit by checking which group of letters (ABC, DEF, etc.) and have a corresponding digit
-            int digit = 0; // number 1 on the keypad (has no letters)
+            int digit = 0; // declaration var (basically number 1 on the keypad)
             if ("ABC".indexOf(ch) >= 0) {
                 digit = 2;
             } else if ("DEF".indexOf(ch) >= 0) {
