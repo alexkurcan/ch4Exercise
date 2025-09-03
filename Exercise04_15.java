@@ -1,5 +1,5 @@
 /*
- * Name: Phone Keypad
+ * Name: Exercise04_15
  * Purpose: Mimics an old telephone keypad and prints out the corresponding number to the letter by getting user input.
  * Programmer: Alex Kurcan
  * Date: 9/3/2025
