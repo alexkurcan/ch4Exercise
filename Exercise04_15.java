@@ -6,41 +6,44 @@
  */
 
 import java.util.Scanner;
-public class Exercise04_15{
+
+public class Exercise04_15 {
     public static void main(String[] args) {
-            Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-            // Get user input
-            System.out.print("Enter a letter: ");
-            String a = input.nextLine();
-            
-            // Making sure that the user puts a letter and not a number
-            char ch = Character.toUpperCase(a.charAt(0));
-            if (ch < 'A' || ch > 'Z') {
-                System.out.println(ch + " is an invalid input. You must put a letter in.");
-                return;
-            }
+        // Get user input
+        System.out.print("Enter a letter: ");
+        String a = input.nextLine();
 
-            // Find the digit by checking which group of letters (ABC, DEF, etc.) and have a corresponding digit
-            int digit = 0; // declaration var (basically number 1 on the keypad)
-            if ("ABC".indexOf(ch) >= 0) {
-                digit = 2;
-            } else if ("DEF".indexOf(ch) >= 0) {
-                digit = 3;
-            } else if ("GHI".indexOf(ch) >= 0) {
-                digit = 4;
-            } else if ("JKL".indexOf(ch) >= 0) {
-                digit = 5;
-            } else if ("MNO".indexOf(ch) >= 0) {
-                digit = 6;
-            } else if ("PQRS".indexOf(ch) >= 0) {
-                digit = 7;
-            } else if ("TUV".indexOf(ch) >= 0) {
-                digit = 8;
-            } else if ("WXYZ".indexOf(ch) >= 0) {
-                digit = 9;
-}
-        // Output with the digit
+        // Convert to uppercase and take the first character
+        char ch = Character.toUpperCase(a.charAt(0));
+
+        // Check for valid input
+        if (ch < 'A' || ch > 'Z') {
+            System.out.println(ch + " is an invalid input. You must put a letter in.");
+            return;
+        }
+
+        int digit = 0;
+        if (ch >= 'A' && ch <= 'C') {
+            digit = 2;
+        } else if (ch >= 'D' && ch <= 'F') {
+            digit = 3;
+        } else if (ch >= 'G' && ch <= 'I') {
+            digit = 4;
+        } else if (ch >= 'J' && ch <= 'L') {
+            digit = 5;
+        } else if (ch >= 'M' && ch <= 'O') {
+            digit = 6;
+        } else if (ch >= 'P' && ch <= 'S') {
+            digit = 7;
+        } else if (ch >= 'T' && ch <= 'V') {
+            digit = 8;
+        } else if (ch >= 'W' && ch <= 'Z') {
+            digit = 9;
+        }
+
+        // Output result
         System.out.println("The number is " + digit);
     }
 }
