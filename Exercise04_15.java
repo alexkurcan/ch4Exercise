@@ -24,7 +24,7 @@ public class Exercise04_15 {
             return;
         }
 
-        int digit = 0;
+        int digit = 0; //basically number 1, dec var
         if (ch >= 'A' && ch <= 'C') {
             digit = 2;
         } else if (ch >= 'D' && ch <= 'F') {
